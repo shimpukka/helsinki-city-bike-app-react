@@ -10,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 
 
 const JourneyList = ({ journeys }) => {
+    console.log('JourneyList');
 
     if (!journeys) return null;
 
