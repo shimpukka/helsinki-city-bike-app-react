@@ -11,13 +11,17 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     backgroundColor: '#007ac9',
-    marginBottom: theme.spacing(5)
+    marginBottom: theme.spacing(10)
   },
   title: {
     flexGrow: 1,
     color: 'white',
-    marginRight: theme.spacing(2),
+    marginRight: theme.spacing(4),
+    fontWeight: 'bold'
   },
+  link: {
+    textDecoration: 'none'
+  }
 }));
 
 export default function ButtonAppBar() {
@@ -27,12 +31,15 @@ export default function ButtonAppBar() {
     <div className={classes.root}>
       <AppBar position="static" className={classes.appBar}>
         <Toolbar>
-          <Link to="/" style={{ textDecoration: 'none' }}>
+          <Typography variant="body1" className={classes.title}>
+              Helsinki city bike app
+          </Typography>
+          <Link to="/" className={classes.link}>
             <Typography variant="body1" className={classes.title}>
                 Journeys
             </Typography>
           </Link>
-          <Link to="/stations" style={{ textDecoration: 'none' }}>
+          <Link to="/stations" className={classes.link}>
             <Typography variant="body1" className={classes.title}>
                 Stations
             </Typography>
