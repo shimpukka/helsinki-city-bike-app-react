@@ -55,7 +55,7 @@ function stableSort(array, comparator) {
 const headCells = [
   { id: 'departure_station_name', numeric: false, disablePadding: false, label: 'Departure station' },
   { id: 'return_station_name', numeric: false, disablePadding: false, label: 'Return station' },
-  { id: 'covered_distance', numeric: true, disablePadding: false, label: 'Journey distance(m)' },
+  { id: 'covered_distance', numeric: true, disablePadding: false, label: 'Journey distance(km)' },
   { id: 'duration', numeric: true, disablePadding: false, label: 'Duration(m)' },
 ];
 
@@ -335,7 +335,7 @@ export default function EnhancedTable({ journeys }) {
                             {row.departure_station_name}
                           </TableCell>
                           <TableCell>{row.return_station_name}</TableCell>
-                          <TableCell align="right">{row.covered_distance}</TableCell>
+                          <TableCell align="right">{row.covered_distance / 1000}</TableCell>
                           <TableCell align="right">{Math.floor(row.duration / 60, 2)}</TableCell>
                         </TableRow>
                       );
