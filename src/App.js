@@ -8,7 +8,7 @@ import {
 import './App.css';
 import LoadingWrapper from './components/Loading';
 import StationList from './components/StationList';
-import StationDetail from './components/StationDetail';
+import StationSingle from './components/StationSingle';
 import Home from './components/Home';
 import EnhancedTable from './components/JourneyList';
 
@@ -21,10 +21,10 @@ const App = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const url = 'http://127.0.0.1:8000/api/journey';
+      const url = 'http://127.0.0.1:8000/api/journey'; 
       const response = await fetch(url);
       const data = await response.json();
-      setAppState( { loading: false, journeys: data })
+      setAppState( { loading: false, journeys: data.results })
     };
     fetchData();
 
@@ -37,7 +37,7 @@ const App = () => {
           {/* <Route index element={<Loading isLoading={appState.loading} journeys={appState.journeys} />} /> */}
           <Route index element={<EnhancedTable journeys={appState.journeys} />} />
           <Route path="stations" element={<StationList />} />
-          <Route path="stations/:id" element={<StationDetail journeys={appState.journeys} />} />
+          <Route path="stations/:id" element={<StationSingle journeys={appState.journeys} />} />
         </Route>
       </Routes>
     </BrowserRouter>
