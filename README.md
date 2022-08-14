@@ -18,7 +18,7 @@ Open [http://localhost:3000](http://localhost:3000) to view the app in your brow
 
 ## Features
 ### Journey list view
-- List journeys (For now it list only 10000 journeys from API's first page)
+- List journeys (For now it lists only 10000 journeys from API's first page)
 - For each journey show departure and return stations, covered distance in kilometers and duration in minutes
 - Ordering per column
 - Rows per page select
