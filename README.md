@@ -16,3 +16,25 @@ $ npm start
 
 Open [http://localhost:3000](http://localhost:3000) to view the app in your browser.
 
+## Features
+### Journey list view
+- List journeys (For now it list only 10000 journeys from API's first page)
+- For each journey show departure and return stations, covered distance in kilometers and duration in minutes
+- Ordering per column
+- Rows per page select
+- Dense padding select
+
+### Station list
+- List all the stations
+- Pagination
+- Searching
+
+### Single station view
+- Station name, address
+- Total number of journeys starting from the station
+- Total number of journeys ending at the station
+- Station location on the map
+- The average distance of a journey starting from the station
+- The average distance of a journey ending at the station
+- Top 5 most popular return stations for journeys starting from the station
+- Top 5 most popular departure stations for journeys ending at the station

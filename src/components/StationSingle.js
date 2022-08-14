@@ -8,7 +8,8 @@ import StationDetail from '../components/StationDetail';
 const useStyles = makeStyles((theme) => ({
     root: {
       flexGrow: 1,
-      color: '#333'
+      color: '#333',
+      marginBottom: '3rem'
     },
     title: {
       fontSize: '2.5rem'

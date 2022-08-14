@@ -6,14 +6,12 @@ import {
   Navigate
 } from "react-router-dom";
 import './App.css';
-import LoadingWrapper from './components/Loading';
 import StationList from './components/StationList';
 import StationSingle from './components/StationSingle';
 import Home from './components/Home';
 import EnhancedTable from './components/JourneyList';
 
 const App = () => {
-  // const Loading = LoadingWrapper(EnhancedTable);
   const [ appState, setAppState ] = useState({
     loading: true,
     journeys: null
@@ -34,7 +32,6 @@ const App = () => {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />}>
-          {/* <Route index element={<Loading isLoading={appState.loading} journeys={appState.journeys} />} /> */}
           <Route index element={<EnhancedTable journeys={appState.journeys} />} />
           <Route path="stations" element={<StationList />} />
           <Route path="stations/:id" element={<StationSingle journeys={appState.journeys} />} />
